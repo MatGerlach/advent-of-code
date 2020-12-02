@@ -31,7 +31,8 @@ def validate_2(policy_password):
     return (password[pos1] == policy_char) ^ (password[pos2] == policy_char)
 
 assert len(list(filter(validate_1,policy_password_list))) == 2
-assert len(list(filter(validate_1,policy_password_list))) == 2
+assert len(list(filter(validate_2,policy_password_list))) == 2
+
 with open("./input.txt") as f:
     input = f.readlines()
 print(len(list(filter(validate_2,input))))
