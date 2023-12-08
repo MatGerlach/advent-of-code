@@ -105,7 +105,6 @@ def task_2(input):
     for line, content in enumerate(input):
         for match in re.finditer(r"\*", content):
             numbers = _get_adjacent_numbers(input, line, match.start())
-            print(numbers)
             if len(numbers) == 2:
                 sum += numbers[0]*numbers[1]
 
